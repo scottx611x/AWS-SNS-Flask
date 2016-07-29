@@ -5,7 +5,7 @@ import sys
 
 messages = []
 IP_TO_SERVE_ON = "0.0.0.0"
-PORT = 80
+PORT = 3928 
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -21,7 +21,7 @@ def handle_requests():
     if request.method == 'POST':
         sys.stdout.write("Message Recieved")
         request_content = json.loads(request.get_data())
-        sys.stdout.write(request_content)
+        sys.stdout.write(str(request_content))
 
         # Insert newest messages to front of list
         messages.insert(0, request_content["Message"])
