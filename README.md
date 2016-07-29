@@ -1,5 +1,5 @@
 # AWS-SNS-Flask
-Basic Flask app to Handle incoming messages from AWS SNS and display them in a  webpage
+Basic Flask app to handle incoming messages from AWS SNS and display them in a  webpage
 
 ## Installation:
 
