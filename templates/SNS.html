@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>AWS SNS Handler</title>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+    <script src="/static/jquery-2.2.4.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>	
+  </head>
+  <body>
+    <div align="center">
+      <br>
+      <a href="/" class="btn btn-success" role="button">Refresh</a>
+      <a href="/clear" class="btn btn-danger" role="button">Clear Messages</a>
+    </div>	
+    
+    <br>
+
+    {% for message in message_queue %}
+          <div  align="center">
+			<h3>SNS Message:</h3> 
+            <p>{{message|safe}}</p>
+          </div>
+    <br>	
+    {% endfor %}
+  </body>
+</html>
